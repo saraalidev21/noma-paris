@@ -11,11 +11,11 @@ noma-paris/
 ├── css/style.css        → tous les styles
 ├── js/main.js            → interactions légères (menu mobile, apparition au scroll)
 └── images/
-    ├── hero.svg                 → visuel principal (hero)
+    ├── hero.svg                 → grande photo du hero
+    ├── produit.svg               → photo de la fiche produit (sous le hero)
     ├── presentation.svg         → sac porté au quotidien
     ├── detail-interieur.svg     → gros plan intérieur / poches
-    ├── detail-matiere.svg       → gros plan matière / logo embossé
-    └── gallery-1.svg … gallery-6.svg → galerie photo (6 emplacements)
+    └── detail-matiere.svg       → gros plan matière / logo embossé
 ```
 
 Ce sont volontairement des **placeholders** (fond ivoire, icône de sac en
@@ -61,11 +61,11 @@ Tableau de correspondance :
 
 | Emplacement dans la page   | Fichier placeholder actuel      | Ratio conseillé |
 |-----------------------------|----------------------------------|------------------|
-| Hero (grande photo)         | `images/hero.svg`                | portrait 4:5     |
+| Hero (grande photo)         | `images/hero.svg`                | paysage / large  |
+| Fiche produit (sous le hero)| `images/produit.svg`             | portrait 4:5     |
 | Présentation du sac         | `images/presentation.svg`        | portrait 4:5     |
 | Détail — intérieur/poches   | `images/detail-interieur.svg`    | portrait 4:5     |
 | Détail — matière/logo       | `images/detail-matiere.svg`      | portrait 4:5     |
-| Galerie (×6)                 | `images/gallery-1.svg` … `gallery-6.svg` | carré 1:1 |
 
 Tu peux remplacer les images une par une, dans n'importe quel ordre — la
 page reste fonctionnelle même si certaines sont encore en placeholder.
