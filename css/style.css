@@ -89,14 +89,15 @@ h2 {
   font-weight: 500;
 }
 
-/* ---------- Reveal on scroll ---------- */
+/* ---------- Reveal on scroll ----------
+   Content stays visible (opacity: 1) at all times — only a subtle
+   upward slide is deferred, so nothing can be left invisible if the
+   scroll observer fails to fire. */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transform: translateY(18px);
+  transition: transform 0.8s ease;
 }
 .reveal.is-visible {
-  opacity: 1;
   transform: translateY(0);
 }
 
