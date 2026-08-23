@@ -234,12 +234,12 @@ h2 {
 }
 .product-sheet-inner {
   display: grid;
-  grid-template-columns: 0.85fr 1fr;
-  gap: clamp(32px, 6vw, 88px);
+  grid-template-columns: 1.35fr 1fr;
+  gap: clamp(32px, 6vw, 72px);
   align-items: center;
   width: 100%;
 }
-.product-media .photo-frame { max-height: 78vh; }
+.product-media .photo-frame { max-height: 80vh; }
 
 .product-info .eyebrow { margin-bottom: 10px; }
 .product-name {
