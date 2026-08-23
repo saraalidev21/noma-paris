@@ -221,7 +221,13 @@ h2 {
   gap: clamp(32px, 6vw, 72px);
   align-items: center;
 }
+.product-media {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 .product-media .photo-frame { max-height: 50vh; }
+.product-media .product-price { display: flex; width: 100%; }
 
 .product-info .eyebrow { margin-bottom: 10px; }
 .product-name {
