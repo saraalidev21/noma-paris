@@ -223,6 +223,77 @@ h2 {
 .photo-frame.ratio-portrait { aspect-ratio: 4 / 5; }
 .photo-frame.ratio-square { aspect-ratio: 1 / 1; }
 
+/* ---------- Product sheet ---------- */
+.product-sheet {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(28px, 5vw, 56px) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.product-sheet-inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: clamp(32px, 6vw, 88px);
+  align-items: center;
+  width: 100%;
+}
+.product-media .photo-frame { max-height: 78vh; }
+
+.product-info .eyebrow { margin-bottom: 10px; }
+.product-name {
+  font-size: clamp(2rem, 3.6vw, 2.6rem);
+  margin-bottom: 16px;
+}
+.product-desc {
+  color: var(--black-soft);
+  max-width: 440px;
+  margin: 0 0 26px;
+}
+.product-features {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-features li {
+  font-size: 0.92rem;
+  color: var(--black-soft);
+  padding-left: 20px;
+  position: relative;
+}
+.product-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 1px;
+  background: var(--beige);
+}
+.product-price {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 28px;
+  background: var(--ivory-soft);
+  border: 1px solid var(--border);
+}
+.product-price .price-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--black-soft);
+}
+.product-price .price-value {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
 /* ---------- Presentation ---------- */
 .presentation {
   padding: var(--section-pad) 0;
@@ -390,6 +461,10 @@ h2 {
 
   .presentation .container { grid-template-columns: 1fr; }
   .presentation .media-col { order: -1; }
+
+  .product-sheet { min-height: auto; }
+  .product-sheet-inner { grid-template-columns: 1fr; }
+  .product-media .photo-frame { max-height: 48vh; }
 
   .details-photos { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
