@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="100%" height="100%" role="img" aria-label="PHOTO GALERIE 4">
+  <rect x="0" y="0" width="900" height="900" fill="#F7F3EC"/>
+  <rect x="14" y="14" width="872" height="872" fill="none" stroke="#D8C9B4" stroke-width="1.5"/>
+  <g transform="translate(450,410)" stroke="#1A1815" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+    <path d="M -55,-10 C -55,-46 55,-46 55,-10" />
+    <path d="M -70,-10 L 70,-10 L 82,80 L -82,80 Z" />
+    <line x1="-82" y1="18" x2="82" y2="18" opacity="0.5"/>
+  </g>
+  <text x="450" y="540" text-anchor="middle" font-family="'Jost','Helvetica Neue',Arial,sans-serif" font-size="15" letter-spacing="2.5" fill="#1A1815" opacity="0.65">PHOTO GALERIE 4</text>
+  <text x="450" y="568" text-anchor="middle" font-family="'Jost','Helvetica Neue',Arial,sans-serif" font-size="11" letter-spacing="1.5" fill="#1A1815" opacity="0.4">REMPLACER : images/gallery-4.jpg</text>
+</svg>
