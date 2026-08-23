@@ -453,7 +453,9 @@ h2 {
 
   .hero {
     grid-template-columns: 1fr;
+    min-height: auto;
     padding-top: 84px;
+    padding-bottom: 40px;
   }
   .hero-media { order: -1; min-height: 52vh; }
   .hero-media .photo-frame { min-height: 52vh; }
