@@ -11,18 +11,15 @@ noma-paris/
 ├── css/style.css        → tous les styles
 ├── js/main.js            → interactions légères (menu mobile, apparition au scroll)
 └── images/
-    ├── hero.jpg                 → grande photo du hero (photo réelle)
-    ├── produit.jpg               → photo de la fiche produit (photo réelle)
-    ├── presentation.png         → sac porté au quotidien (photo réelle)
-    ├── detail-interieur.jpg     → gros plan intérieur / poches (photo réelle)
-    └── detail-matiere.svg       → gros plan matière / logo embossé
+    ├── hero.jpg                 → grande photo du hero
+    ├── produit.jpg               → photo de la fiche produit
+    ├── presentation.png         → sac porté au quotidien
+    ├── detail-interieur.jpg     → gros plan intérieur / poches
+    └── detail-matiere.jpg       → gros plan matière du sac
 ```
 
-Le fichier `.svg` restant est volontairement un **placeholder** (fond
-ivoire, icône de sac en ligne fine, légende indiquant quel visuel doit venir
-ici) — aucune fausse photo n'a été générée. `hero.jpg`, `produit.jpg`,
-`presentation.png` et `detail-interieur.jpg` sont déjà les vraies photos
-intégrées au site.
+Toutes les images sont désormais de vraies photos — plus aucun placeholder
+sur le site.
 
 ## Prévisualiser la page en local
 
@@ -42,35 +39,37 @@ python3 -m http.server 8000
 
 Puis ouvre `http://localhost:8000` dans ton navigateur.
 
-## Remplacer une image par une vraie photo
+## Remplacer une photo par une nouvelle version
 
-1. Place ta photo dans le dossier `images/` (formats `.jpg`, `.jpeg`, `.webp`
-   ou `.png`, idéalement 1200 px de large minimum).
+1. Place la nouvelle photo dans le dossier `images/` (formats `.jpg`,
+   `.jpeg`, `.webp` ou `.png`, idéalement 1200 px de large minimum).
 2. Ouvre `index.html`, cherche la balise `<img>` correspondante et remplace
-   le nom de fichier `.svg` par le nom de ta photo.
+   le nom de fichier existant par le nom de ta nouvelle photo.
 
-Exemple pour la dernière image de détail restante :
+Exemple pour l'image du hero :
 
 ```html
 <!-- avant -->
-<img src="images/detail-matiere.svg" alt="Détail matière et logo embossé NÔMA Paris — photo à venir">
+<img src="images/hero.jpg" alt="Sac NÔMA Paris tenu à deux mains — Mère. Entière.">
 
 <!-- après -->
-<img src="images/detail-matiere.jpg" alt="Détail matière et logo embossé NÔMA Paris">
+<img src="images/hero-v2.jpg" alt="Sac NÔMA Paris tenu à deux mains — Mère. Entière.">
 ```
 
-Tableau de correspondance :
+Table des emplacements :
 
-| Emplacement dans la page   | Fichier placeholder actuel      | Ratio conseillé |
-|-----------------------------|----------------------------------|------------------|
-| Hero (grande photo)         | `images/hero.jpg` ✅ déjà remplacée | paysage / large  |
-| Fiche produit (sous le hero)| `images/produit.jpg` ✅ déjà remplacée | portrait 4:5  |
-| Présentation du sac         | `images/presentation.png` ✅ déjà remplacée | portrait 4:5 |
-| Détail — intérieur/poches   | `images/detail-interieur.jpg` ✅ déjà remplacée | portrait 4:5 |
-| Détail — matière/logo       | `images/detail-matiere.svg`      | portrait 4:5     |
+| Emplacement dans la page   | Fichier actuel      | Ratio du cadre |
+|-----------------------------|----------------------|------------------|
+| Hero (grande photo)         | `images/hero.jpg`    | ratio natif de la photo, sans recadrage |
+| Fiche produit (sous le hero)| `images/produit.jpg` | portrait 4:5     |
+| Présentation du sac         | `images/presentation.png` | portrait 4:5 |
+| Détail — intérieur/poches   | `images/detail-interieur.jpg` | portrait 4:5 |
+| Détail — matière            | `images/detail-matiere.jpg`   | portrait 4:5 |
 
-Tu peux remplacer les images une par une, dans n'importe quel ordre — la
-page reste fonctionnelle même si certaines sont encore en placeholder.
+Toutes les images sauf le hero sont affichées dans un cadre portrait 4:5
+(recadrage centré si la photo a un ratio différent) — pense à vérifier le
+rendu après changement si la nouvelle photo est très différente de
+l'ancienne.
 
 ## Mettre la page en ligne gratuitement
 
