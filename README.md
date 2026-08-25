@@ -12,7 +12,7 @@ noma-paris/
 ├── js/main.js            → interactions légères (menu mobile, apparition au scroll)
 └── images/
     ├── hero.jpg                 → grande photo du hero (photo réelle)
-    ├── produit.svg               → photo de la fiche produit (sous le hero)
+    ├── produit.jpg               → photo de la fiche produit (photo réelle)
     ├── presentation.svg         → sac porté au quotidien
     ├── detail-interieur.svg     → gros plan intérieur / poches
     └── detail-matiere.svg       → gros plan matière / logo embossé
@@ -20,8 +20,8 @@ noma-paris/
 
 Les fichiers `.svg` restants sont volontairement des **placeholders** (fond
 ivoire, icône de sac en ligne fine, légende indiquant quel visuel doit venir
-ici) — aucune fausse photo n'a été générée. `hero.jpg` est la première vraie
-photo intégrée au site.
+ici) — aucune fausse photo n'a été générée. `hero.jpg` et `produit.jpg`
+sont déjà les vraies photos intégrées au site.
 
 ## Prévisualiser la page en local
 
@@ -48,14 +48,14 @@ Puis ouvre `http://localhost:8000` dans ton navigateur.
 2. Ouvre `index.html`, cherche la balise `<img>` correspondante et remplace
    le nom de fichier `.svg` par le nom de ta photo.
 
-Exemple pour l'image de la fiche produit :
+Exemple pour l'image de présentation :
 
 ```html
 <!-- avant -->
-<img src="images/produit.svg" alt="Sac NÔMA Paris — photo produit à venir">
+<img src="images/presentation.svg" alt="Sac NÔMA Paris porté au quotidien — photo à venir">
 
 <!-- après -->
-<img src="images/produit.jpg" alt="Sac NÔMA Paris">
+<img src="images/presentation.jpg" alt="Sac NÔMA Paris porté au quotidien">
 ```
 
 Tableau de correspondance :
@@ -63,7 +63,7 @@ Tableau de correspondance :
 | Emplacement dans la page   | Fichier placeholder actuel      | Ratio conseillé |
 |-----------------------------|----------------------------------|------------------|
 | Hero (grande photo)         | `images/hero.jpg` ✅ déjà remplacée | paysage / large  |
-| Fiche produit (sous le hero)| `images/produit.svg`             | portrait 4:5     |
+| Fiche produit (sous le hero)| `images/produit.jpg` ✅ déjà remplacée | portrait 4:5  |
 | Présentation du sac         | `images/presentation.svg`        | portrait 4:5     |
 | Détail — intérieur/poches   | `images/detail-interieur.svg`    | portrait 4:5     |
 | Détail — matière/logo       | `images/detail-matiere.svg`      | portrait 4:5     |
