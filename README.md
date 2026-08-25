@@ -13,15 +13,15 @@ noma-paris/
 └── images/
     ├── hero.jpg                 → grande photo du hero (photo réelle)
     ├── produit.jpg               → photo de la fiche produit (photo réelle)
-    ├── presentation.svg         → sac porté au quotidien
+    ├── presentation.png         → sac porté au quotidien (photo réelle)
     ├── detail-interieur.svg     → gros plan intérieur / poches
     └── detail-matiere.svg       → gros plan matière / logo embossé
 ```
 
 Les fichiers `.svg` restants sont volontairement des **placeholders** (fond
 ivoire, icône de sac en ligne fine, légende indiquant quel visuel doit venir
-ici) — aucune fausse photo n'a été générée. `hero.jpg` et `produit.jpg`
-sont déjà les vraies photos intégrées au site.
+ici) — aucune fausse photo n'a été générée. `hero.jpg`, `produit.jpg` et
+`presentation.png` sont déjà les vraies photos intégrées au site.
 
 ## Prévisualiser la page en local
 
@@ -48,14 +48,14 @@ Puis ouvre `http://localhost:8000` dans ton navigateur.
 2. Ouvre `index.html`, cherche la balise `<img>` correspondante et remplace
    le nom de fichier `.svg` par le nom de ta photo.
 
-Exemple pour l'image de présentation :
+Exemple pour l'image de détail :
 
 ```html
 <!-- avant -->
-<img src="images/presentation.svg" alt="Sac NÔMA Paris porté au quotidien — photo à venir">
+<img src="images/detail-interieur.svg" alt="Intérieur organisé du sac NÔMA Paris — photo à venir">
 
 <!-- après -->
-<img src="images/presentation.jpg" alt="Sac NÔMA Paris porté au quotidien">
+<img src="images/detail-interieur.jpg" alt="Intérieur organisé du sac NÔMA Paris">
 ```
 
 Tableau de correspondance :
@@ -64,7 +64,7 @@ Tableau de correspondance :
 |-----------------------------|----------------------------------|------------------|
 | Hero (grande photo)         | `images/hero.jpg` ✅ déjà remplacée | paysage / large  |
 | Fiche produit (sous le hero)| `images/produit.jpg` ✅ déjà remplacée | portrait 4:5  |
-| Présentation du sac         | `images/presentation.svg`        | portrait 4:5     |
+| Présentation du sac         | `images/presentation.png` ✅ déjà remplacée | portrait 4:5 |
 | Détail — intérieur/poches   | `images/detail-interieur.svg`    | portrait 4:5     |
 | Détail — matière/logo       | `images/detail-matiere.svg`      | portrait 4:5     |
 
