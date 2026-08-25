@@ -11,16 +11,17 @@ noma-paris/
 ├── css/style.css        → tous les styles
 ├── js/main.js            → interactions légères (menu mobile, apparition au scroll)
 └── images/
-    ├── hero.svg                 → grande photo du hero
+    ├── hero.jpg                 → grande photo du hero (photo réelle)
     ├── produit.svg               → photo de la fiche produit (sous le hero)
     ├── presentation.svg         → sac porté au quotidien
     ├── detail-interieur.svg     → gros plan intérieur / poches
     └── detail-matiere.svg       → gros plan matière / logo embossé
 ```
 
-Ce sont volontairement des **placeholders** (fond ivoire, icône de sac en
-ligne fine, légende indiquant quel visuel doit venir ici) — aucune fausse
-photo n'a été générée.
+Les fichiers `.svg` restants sont volontairement des **placeholders** (fond
+ivoire, icône de sac en ligne fine, légende indiquant quel visuel doit venir
+ici) — aucune fausse photo n'a été générée. `hero.jpg` est la première vraie
+photo intégrée au site.
 
 ## Prévisualiser la page en local
 
@@ -47,21 +48,21 @@ Puis ouvre `http://localhost:8000` dans ton navigateur.
 2. Ouvre `index.html`, cherche la balise `<img>` correspondante et remplace
    le nom de fichier `.svg` par le nom de ta photo.
 
-Exemple pour l'image du hero :
+Exemple pour l'image de la fiche produit :
 
 ```html
 <!-- avant -->
-<img src="images/hero.svg" alt="Sac NÔMA Paris — photo à venir">
+<img src="images/produit.svg" alt="Sac NÔMA Paris — photo produit à venir">
 
 <!-- après -->
-<img src="images/hero.jpg" alt="Sac NÔMA Paris">
+<img src="images/produit.jpg" alt="Sac NÔMA Paris">
 ```
 
 Tableau de correspondance :
 
 | Emplacement dans la page   | Fichier placeholder actuel      | Ratio conseillé |
 |-----------------------------|----------------------------------|------------------|
-| Hero (grande photo)         | `images/hero.svg`                | paysage / large  |
+| Hero (grande photo)         | `images/hero.jpg` ✅ déjà remplacée | paysage / large  |
 | Fiche produit (sous le hero)| `images/produit.svg`             | portrait 4:5     |
 | Présentation du sac         | `images/presentation.svg`        | portrait 4:5     |
 | Détail — intérieur/poches   | `images/detail-interieur.svg`    | portrait 4:5     |
