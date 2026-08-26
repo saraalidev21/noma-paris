@@ -101,4 +101,4 @@ serveur, pas de base de données, pas de trafic e-commerce).
 Conformément au brief : pas de panier, pas de paiement, pas de compte
 client, pas de compte à rebours, pas de faux avis, pas de mention
 « best-seller », pas de prix barré ni de fausse réduction. Le prix affiché
-(139 €) est présenté partout comme le **prix public conseillé**.
+(149 €) est présenté partout comme le **prix public conseillé**.
